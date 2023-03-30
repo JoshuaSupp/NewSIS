@@ -1,0 +1,132 @@
+#kxtable #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+#kxtable #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+#kxtable #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#kxtable #customers tr:hover {background-color: #ddd;}
+
+#kxtable #customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+#kxtable input{
+    display: inline-block;
+}
+
+#checkbox{
+    margin-left: 5%;
+    width: 15px;
+    height: 15px;
+    transform : scale(2);
+}
+
+#check1{
+    margin-left: 2%;
+    width: 15px;
+    height: 15px;
+    transform : scale(2);
+}
+
+#attendance{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#headings{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ #progress{
+  font-size: 20px;
+  width: 80px;
+  margin-left: 2%;
+  display: inline;
+}
+
+
+
+ select option[value = 'E']{
+  background: red;
+}
+
+select option[value = 'C']{
+  background: yellow;
+}
+select option[value = 'B']{
+  background: lightgreen;
+}
+select option[value = 'A']{
+  background: green;
+}
+select option[value = 'A*']{
+  background: blue;
+}
+
+
+
+#plus{
+  margin-left: 20%;
+}
+
+.pdregistry input[type=submit]{
+  display: inline-block;
+  border-radius: 3px;
+  background: rgb(32, 43, 255);
+  border: black solid;
+  color: #FFFFFF;
+  font-size: 13px;
+  padding: 20px;
+  width: 80px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  margin-top: 7%;
+  margin-left: 10%;
+  border-radius: 10px;
+}
+
+ input[type=submit]:hover{
+  background-color: aqua;
+}
+
+.pdregistry #delbtn{
+background-color: #ff0202;
+border: solid black;
+color: #fff;
+text-decoration: none;
+cursor: pointer;
+box-sizing: border-box;
+box-shadow: 0 15px 10px rgba(0,0,0,.6);
+border-radius: 10px;
+font-family: sans-serif;
+text-align: center;
+}
+
+.pdregistry #delbtn:hover{
+  background-color: crimson;
+  transition: 0.1ms;
+}
+
+.pdregistry{
+  background-color: rgb(228, 225, 219, 1);
+  margin: auto 0px;
+  width: fit-content;
+  height: 1085px;
+}

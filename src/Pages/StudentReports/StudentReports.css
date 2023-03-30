@@ -1,0 +1,217 @@
+.streports{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    font-size: 28px;
+    margin-left: 250%;
+    text-decoration: underline;
+    width: 100%;
+   
+}
+
+#studentreport{
+  background-color: rgb(228, 225, 219, 1);
+  margin: auto 0px;
+  width: 1440px;
+  height: 985px;
+}
+
+
+/* kx button CSS */
+.kxbutton-19 {
+  display: inline-block;
+  appearance: button;
+  background-color: #1899D6;
+  border: solid ;
+  border-radius: 20px;
+  border-width: 0 0 3px;
+  box-sizing: border-box;
+  color: #050505;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 230%;
+  margin-top: 50%;
+  margin-left: 5%;
+
+}
+
+.kxbutton-19:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.kxbutton-19:main,
+.kxbutton-19:focus {
+  user-select: auto;
+}
+
+.kxbutton-19:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.kxbutton-19:disabled {
+  cursor: auto;
+}
+
+
+
+
+
+
+/* an button CSS */
+.anbutton-19 {
+    appearance: button;
+    background-color: #1899D6;
+    border: solid ;
+    border-radius: 20px;
+    border-width: 0 0 3px;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 230%;
+    margin-left: 200%;
+    margin-top: 10%;
+  
+  }
+  
+  .anbutton-19:after {
+    background-clip: padding-box;
+    background-color: #1CB0F6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+  
+  .anbutton-19:main,
+  .anbutton-19:focus {
+    user-select: auto;
+  }
+  
+  .anbutton-19:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+  }
+  
+  .anbutton-19:disabled {
+    cursor: auto;
+  }
+
+
+
+  /* pd button CSS */
+.pdbutton-19 {
+    appearance: button;
+    background-color: #1899D6;
+    border: solid ;
+    border-radius: 20px;
+    border-width: 0 0 3px;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 230%;
+    margin-left: 333%;
+    margin-top: 10%;
+  
+  }
+  
+  .pdbutton-19:after {
+    background-clip: padding-box;
+    background-color: hsl(199, 100%, 57%);
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+  
+  .pdbutton-19:main,
+  .pdbutton-19:focus {
+    user-select: auto;
+  }
+  
+  .pdbutton-19:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+  }
+  
+  .pdbutton-19:disabled {
+    cursor: auto;
+  }

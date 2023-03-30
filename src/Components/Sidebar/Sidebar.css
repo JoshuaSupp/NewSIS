@@ -1,0 +1,64 @@
+/* css for sidebar */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: 0;
+  }
+  
+  .container{
+    display: flex;
+  }
+  
+  .main{
+    
+    padding: 20px;
+  }
+  
+  .sidebar{
+    position: relative;
+    background: black;
+    color: white;
+    height: 176%;
+    width: 500px;
+    transition: all 0.5s;
+  }
+  
+  .topsection{
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+  }
+  
+  .logo{
+    font-size: 10px;
+    
+  }
+  
+  .bars{
+    font-size: 25px;
+    display: flex;
+    margin-left: 30px;
+  }
+  
+  .link{
+    display: flex;
+    color: white;
+    padding: 10px 15px;
+    gap: 15px;
+    transition: all 0.5s;
+  }
+  
+  .link:hover{
+    background: rgb(255, 155, 4);
+    color: black;
+    transition: all 0.5s;
+  }
+  
+  .active{
+    background: rgb(255, 155, 4);
+    color: black;
+  }
+  
+  .icon, .link-text{
+    font-size: 20px;
+  }
