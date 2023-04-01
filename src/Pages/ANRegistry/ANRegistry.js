@@ -71,7 +71,7 @@ const ANRegistry = () => {
         <button class="button button1"><a href="/CreateAN">Add AN Students</a></button>
 
         
-        <button class="button button2"><a href="/">AN Student Grades</a></button>
+        <button class="button button2"><a href="/ANStudentG">AN Student Grades</a></button>
         </div>
         <table>
             <tr style={{lineHeight: "50px",backgroundColor: "rgb(241, 110, 110)"}}>
@@ -83,7 +83,7 @@ const ANRegistry = () => {
               <th style={{color:"black"}}>Parent Name</th>
               <th style={{color:"black"}}>Parent/Student Contact</th>
               <th style={{color:"black"}}>Comments</th>
-
+              <th></th>
             </tr>
      
    

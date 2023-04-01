@@ -32,14 +32,14 @@ const Login = () => {
     <div class='login'>
    
          <div class="container">
-         <img  class='logo' src='./images/MeuLogo.png' alt='Meulabs Logo' width='120px' height="70px"  />
+         <img  class='logo' src='./images/MeuLogo.png' alt='Meulabs Logo' width='150px' height="90px"  />
   <div class="left">
   
     <div class="header">
 
-    <h2 class="animation a3" id='meulabs'>Meu Labs</h2>
-      <h2 class="animation a1">Student Information System</h2>
-      <h4 class="animation a2">Log in to your account using username and password</h4>
+    <h2 class="animation a3" id='meulabs' >Meu Labs</h2>
+      <h2 class="animation a1" style={{marginLeft:'-5px'}}>Student Information System</h2>
+      <h4 class="animation a1" style={{marginLeft:'-22px'}}>Log in to your account using username and password</h4>
     </div>
     <div class="form">
       <input type="username" class="form-field animation a3" placeholder="Username"  onChange={(e) => {
@@ -54,7 +54,7 @@ const Login = () => {
       
      
     </div>
-    <p style={{marginLeft:"11%",marginTop:"5%",fontSize:"20px",fontFamily:"Arial"}}> {loginStatus}</p>
+    <p style={{marginLeft:"6%",marginTop:"5%",fontSize:"20px",fontFamily:"Arial"}}> {loginStatus}</p>
   </div>
   <div class="right"></div>
 </div>

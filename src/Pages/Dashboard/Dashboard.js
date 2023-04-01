@@ -35,9 +35,9 @@ const Dashboard = () => {
       <h1 style={{top: "50%",left:"32%",textDecoration:"underline"}}>CLASSES</h1>
      
       <div class="flex-container">
-      <div style={{fontFamily: "Josefin Sans, sans-serif"}}><a href='./PD'>Product design<br/><img src="https://theknowledgeexplorer.files.wordpress.com/2020/04/video-conferencing-chat.png?w=700" alt="KX"style={{width: "250px",height: "230px",marginTop:"10px",marginLeft:"10px",borderRadius:"25px"}}/></a></div>
-   <div style={{fontFamily: "Josefin Sans, sans-serif"}}><a href='./KX'>Knowledge explorers <br/><img src="https://i.ibb.co/s3hg1S4/kximg.png" alt="KX"style={{width: "250px",height: "230px",marginTop:"10px",marginLeft:"10px",borderRadius:"25px"}}/></a></div>
-   <div style={{fontFamily: "Josefin Sans, sans-serif"}}><a href='./AN'>Analytics <br/><img  src="https://th.bing.com/th/id/R.33c6aa2e7918b4ce06d44f61b970f976?rik=VPE%2fOisadut9DQ&pid=ImgRaw&r=0" alt="KX"style={{width: "250px",height: "230px",marginTop:"10px",marginLeft:"10px",borderRadius:"25px"}}/></a></div>  
+      <div style={{fontFamily: "Josefin Sans, sans-serif"}}><a href='./PDRegistry'>Product design<br/><img src="/images/pd2.jpeg" alt="KX"style={{width: "275px",height: "230px",marginTop:"5px",marginLeft:"10px",borderRadius:"25px"}}/></a></div>
+   <div style={{fontFamily: "Josefin Sans, sans-serif"}}><a href='./KXRegistry'>Knowledge explorers <br/><img src="/images/kxpic.jpg" alt="KX"style={{width: "280px",height: "230px",marginTop:"5px",marginLeft:"10px",borderRadius:"25px"}}/></a></div>
+   <div style={{fontFamily: "Josefin Sans, sans-serif"}}><a href='./ANRegistry'>Analytics <br/><img  src="/images/anpic.png" alt="KX"style={{width: "280px",height: "235px",marginTop:"5px",marginLeft:"10px",borderRadius:"25px"}}/></a></div>  
    </div>
 
 

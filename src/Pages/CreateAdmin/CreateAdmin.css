@@ -1,0 +1,97 @@
+.addadmin{
+    background-color: #e8c1a9;
+    
+}
+
+
+.addadmin h1 {
+    background-color: orange;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+  }
+  
+  .addadmin h2 {
+    
+    text-align: center;
+    align-items: center;
+  }
+  
+  .addadmin  .generate-id {
+    font-size: 30px;
+    background-color: rgb(252, 187, 67);
+    color: #fffbf0;
+    border: none;
+    border-radius: 2em;
+    width: 20%;
+    position: absolute;
+    right: 60px;
+    bottom: 100px;
+    transition: 0.3s ease;
+  }
+  
+  .addadmin .generate-id:hover {
+    background-color: rgb(132, 214, 9);
+    opacity: 0.8;
+  }
+  
+  .addadmin .exit {
+    font-size: 30px;
+    background-color: rgb(243, 90, 90);
+    color: #fffbf0;
+    border: none;
+    border-radius: 2em;
+    width: 13%;
+    
+    right: 60px;
+    top: 20px;
+    transition: 0.3s ease;
+  }
+  
+  .addadmin .exit:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    background-color: rgb(236, 95, 29);
+  
+  }
+
+  .description label{
+    padding: 12px 20px;
+    width: 40%;
+    font-size: 25px;
+    display: block;
+    border: 1px solid orange;
+    border-radius: 4px;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    background-color: #fbbc95;
+    background-image: linear-gradient(315deg, #fbbc95 0%, #fddac5 74%);
+    margin-left: 30%;
+  }
+  
+  .description input[type=text] {
+    width: 40%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    margin-left: 30%;
+    text-align: center;
+  }
+
+  .submit{
+    width: 100px;
+    background-color: orange;
+    margin-top: 1%;
+    font-size: 30px;
+    border-radius: 2em;
+    margin-left: 65%;
+  }
+
+  .adminform{
+    background-color: #e8c1a9;
+  }

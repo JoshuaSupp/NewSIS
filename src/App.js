@@ -23,6 +23,9 @@ import "react-toastify/dist/ReactToastify.css";
 import PDAccounts from './Pages/PDAccounts/PDAccounts';
 import Navbar from './Components/Navbar/Navbar';
 import Clans from './Pages/Clans/Clans'
+import ANStudentG from './Pages/ANStudentG/ANStudentG';
+import PDStudentG from './Pages/PDStudentG/PDStudentG';
+import KXStudentG from './Pages/KXStudentG/KXStudentG';
 
 
 function App() {
@@ -50,6 +53,9 @@ function App() {
     <Route path='/CreatePDLogin' exact to element={<CreatePDLogin/>} />
     <Route path='/Navbar' exact to element={<Navbar/>} />
     <Route path='/Clans' exact to element={<Clans/>} />
+    <Route path='/ANStudentG' exact to element={<ANStudentG/>}/>
+    <Route path='/KXStudentG' exact to element={<KXStudentG/>} />
+    <Route path='/PDStudentG' exact to element={<PDStudentG/>} />
     </Routes>
     
     </BrowserRouter>

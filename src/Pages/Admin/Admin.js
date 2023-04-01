@@ -8,7 +8,7 @@ import Navbar from '../../Components/Navbar/Navbar';
 
 const Admin = () => {
 
-  const user=("Joshua");
+ 
 
   const[data, setData] = useState([]);
 
@@ -21,16 +21,16 @@ const Admin = () => {
     loadData();
   }, []);
 
-  const deleteContact = (Admin_username) => {
+  const deleteContact = (username) => {
     if(window.confirm("Are you sure that you want to a admin?")){
-      axios.delete(`http://localhost:5000/api/remove/${Admin_username}`)
+      axios.delete(`http://localhost:5000/api/remove/${username}`)
       
       toast.success("Admin Deleted Successfully");
       setTimeout(() => loadData(), 500);
     }
   }
 
-
+  const username=('Joshua');
 
   return (
     <div class='admin'>
@@ -46,9 +46,9 @@ const Admin = () => {
      
     <h2>Welcome to the Admin page</h2>
         
-        <div class="header">Welcome Mr.{}</div>
-          <a href="/AddAdmin">
-            <div class="add">-Add Admin</div>
+        <div class="header">Welcome Mr.{username}</div>
+          <a href="/CreateAdmin">
+            <div class="add">- Add Admin - </div>
           </a>
         </div> 
 
@@ -62,15 +62,12 @@ const Admin = () => {
           {data.map((item, index)=> {
     return(
           <tr>
-          <td>{item.Admin_id}</td>
-          <td style={{color:'white'}}>{item.Admin_username}</td>
-          <td>{item.Admin_password}</td>
+          <td style={{background:'white'}}>{item.admin_id}</td>
+          <td style={{background:'white'}}>{item.username}</td>
+          <td style={{background:'white'}}>{item.password}</td>
 
-          <td style={{width:'20px'}}>
-          <Link to={`/view/${item.Admin_id}`}>
-         <button class='btnview'>View</button>
-         </Link>             
-         <button  class='btndelete' onClick={() => deleteContact(item.Admin_username)}  >Delete</button>       
+          <td style={{width:'20px',background:' #BFBFBF',borderRadius:'10px'}}>            
+            <img  onClick={() => deleteContact(item.admin_id)} style={{marginTop: "40px", marginLeft: "0px",width:"70px",height:"60px",}}  src ="/images/deleteicon.png"   alt='' />
           </td>
           </tr>
            )

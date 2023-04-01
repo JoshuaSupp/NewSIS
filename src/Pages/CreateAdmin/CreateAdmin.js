@@ -1,5 +1,5 @@
 import React, {useState, useEffect}  from 'react'
-import Sidebar from '../../Components/Sidebar/Sidebar'
+import Navbar from '../../Components/Navbar/Navbar'
 import './CreateAdmin.css'
 import {useParams, Link, useNavigate} from "react-router-dom"
 import axios from 'axios'
@@ -41,67 +41,58 @@ const CreateAdmin = () => {
   }
 
   return (
-    <div id='cadmin'>
-    <Sidebar>
-    <div class="login-box">
-  <h2>Create Admin</h2>
-  <form  onSubmit={handleSubmit}>
-    <div class="user-box">
-      
-    </div>
-    <div class="user-box">
-      <input
-      type="text" 
-      id="username"
-      name="username" 
-      required
-      
-      value={username}
-      onChange={handleInputChange}
-      />
-      <label style={{color:'orange'}}>Username</label>
-    </div>
-    <div class="user-box">
-      <input type="password" 
-      id="password"
-      name="password" 
-      required
-      value={password}
-      onChange={handleInputChange}
-      />
-      <label style={{color:'orange'}}>Password</label>
-    </div>
-    <div class="user-box">
-      <input type="text"
-       id="role" 
-       name="role" 
-       required
-       value={role}
-       onChange={handleInputChange}
-       />
-      <label  style={{color:'orange'}}>Role</label>
-    </div>
+    <div class='addadmin'>
+      <Navbar/>
+    <h1>Add Admin</h1>
+        <br />
+        <div class="description">
+          <form class='adminform' onSubmit={handleSubmit}>
 
-    <div id='createadmin'>
-    <a href='#'>
-    <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-   <input  type="submit"  value="Create Admin"/>
-   </a>
-   </div>
-   {/* <a href='/'>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Create Admin
-   </a> */}
-  </form>
-</div>
-    </Sidebar>
-    </div>
+            <label>Admin Username</label>
+            <input
+             type="text"
+             id='username'
+             name='username'
+             placeholder='~ Admin Username ~'
+             value={username}
+             onChange={handleInputChange}
+             required
+            />
+    
+            <label>Admin Password</label>
+            <input
+             type="text"
+             id='password'
+             name='password'
+             placeholder='~ Admin Password ~'
+             value={password}
+             onChange={handleInputChange}
+             required
+            />
+
+            <label>Role</label>
+            <input
+             type="text"
+             id='role'
+             name='role'
+             placeholder='~ Admin Role ~'
+             value={role}
+             onChange={handleInputChange}
+             required
+            />
+            <br/>
+          <input class='submit' type="submit" value="Create"/>
+          </form>
+         
+        </div>
+      
+        <div class="exit-btn">
+          <a href="/Admin">
+            <button class="exit">Back</button>
+          </a>
+        </div>
+    
+        </div>
   )
 }
 

@@ -72,7 +72,7 @@ const KXRegistry = () => {
       <button class="button button1"><a href="/CreateKX">Add KX Students</a></button>
 
       
-      <button class="button button2"><a href="/">KX Student Grades</a></button>
+      <button class="button button2"><a href="/KXStudentG">KX Student Grades</a></button>
       </div>
       <table>
           <tr style={{lineHeight: "50px",backgroundColor: "rgb(241, 110, 110)"}}>
@@ -84,7 +84,7 @@ const KXRegistry = () => {
             <th style={{color:"black"}}>Parent Name</th>
             <th style={{color:"black"}}>Parent/Student Contact</th>
             <th style={{color:"black"}}>Comments</th>
-
+            <th></th>
           </tr>
    
  

@@ -77,7 +77,7 @@ const PDRegistry = () => {
         <button class="button button1"><a href="/CreatePD">Add PD Students</a></button>
 
         
-        <button class="button button2"><a href="/">PD Student Grades</a></button>
+        <button class="button button2"><a href="/PDStudentG">PD Student Grades</a></button>
         </div>
         <table>
             <tr style={{lineHeight: "50px",backgroundColor: "rgb(241, 110, 110)"}}>
@@ -89,7 +89,7 @@ const PDRegistry = () => {
               <th style={{color:"black"}}>Parent Name</th>
               <th style={{color:"black"}}>Parent/Student Contact</th>
               <th style={{color:"black"}}>Comments</th>
-
+              <th></th>
             </tr>
      
    

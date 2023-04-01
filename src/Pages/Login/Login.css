@@ -1,13 +1,11 @@
 #login { box-sizing: border-box; }
 @import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
 
-.login .logo{
-  background-color: white;
-}
 
 .login{
   font-family: 'Rubik', sans-serif;
-  background: orange;
+  background-color: #f5d020;
+ background-image: linear-gradient(315deg, #f5d020 50%, #f53803 80%);
   text-decoration: bold;
 }
 .container {
@@ -67,7 +65,7 @@
 }
 
 #meulabs{
- margin-left: 25%;
+ margin-left: 26%;
  margin-bottom: 1%;
  text-shadow: #000;
  text-decoration: bold;
