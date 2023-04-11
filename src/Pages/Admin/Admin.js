@@ -57,6 +57,7 @@ const Admin = () => {
           <th>Admin ID</th>
           <th>Admin Username</th>
           <th>Admin Password</th>
+          <th>Role</th>
           <th></th>
           </tr>
           {data.map((item, index)=> {
@@ -65,6 +66,7 @@ const Admin = () => {
           <td style={{background:'white'}}>{item.admin_id}</td>
           <td style={{background:'white'}}>{item.username}</td>
           <td style={{background:'white'}}>{item.password}</td>
+          <td style={{background:'white'}}>{item.role}</td>
 
           <td style={{width:'20px',background:' #BFBFBF',borderRadius:'10px'}}>            
             <img  onClick={() => deleteContact(item.admin_id)} style={{marginTop: "40px", marginLeft: "0px",width:"70px",height:"60px",}}  src ="/images/deleteicon.png"   alt='' />

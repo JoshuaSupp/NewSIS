@@ -26,6 +26,8 @@ import Clans from './Pages/Clans/Clans'
 import ANStudentG from './Pages/ANStudentG/ANStudentG';
 import PDStudentG from './Pages/PDStudentG/PDStudentG';
 import KXStudentG from './Pages/KXStudentG/KXStudentG';
+import UpdateANStudentG from './Pages/ANStudentG/UpdateANStudentG';
+import UpdateKXStudentG from './Pages/KXStudentG/UpdateKXStudentG';
 
 
 function App() {
@@ -56,6 +58,8 @@ function App() {
     <Route path='/ANStudentG' exact to element={<ANStudentG/>}/>
     <Route path='/KXStudentG' exact to element={<KXStudentG/>} />
     <Route path='/PDStudentG' exact to element={<PDStudentG/>} />
+    <Route path='/updatean/:id' exact to element={<UpdateANStudentG/>} />
+    <Route path='/updatekx/:id' exact to element={<UpdateKXStudentG/>} />
     </Routes>
     
     </BrowserRouter>

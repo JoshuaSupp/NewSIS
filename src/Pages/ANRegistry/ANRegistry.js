@@ -24,7 +24,7 @@ const initialState = {
 
 const ANRegistry = () => {
 
-   //view data from an1e01_registry table
+   //view data from an_registry table
    const[data, setData] = useState([]);
 
    const loadData = async () => {
@@ -36,7 +36,7 @@ const ANRegistry = () => {
      loadData();
    }, []);
    
-   //delete kx1e01_registry data
+   //delete an_registry data
    const deleteContact = (id) => {
      if(window.confirm("Are you sure that you want to delete a AN Student?")){
        axios.delete(`http://localhost:5002/api/remove/${id}`)
@@ -83,7 +83,7 @@ const ANRegistry = () => {
               <th style={{color:"black"}}>Parent Name</th>
               <th style={{color:"black"}}>Parent/Student Contact</th>
               <th style={{color:"black"}}>Comments</th>
-              <th></th>
+              <th style={{color:"black"}}>Actions</th>
             </tr>
      
    

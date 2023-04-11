@@ -77,7 +77,7 @@ const KXStudentG = () => {
             <th style={{color:"blue"}}>Puzzle 06</th>
             </th>
             <th style={{color:"black"}}>Total Grade</th>
-            
+            <th  style={{color:"black"}}>Action</th>
           </tr>
    
  
@@ -87,64 +87,19 @@ const KXStudentG = () => {
             <td>{item.id}</td>
             <td>{item.index_no}</td>
             <td>{item.full_name}</td>
+            <div >
+            <td style={{backgroundColor:'white',height:'120px',width:'100px',marginLeft:'20%'}}>{item.puzzle_01}</td>
+           <td style={{backgroundColor:'white',height:'120px',width:'100px',marginLeft:'20%'}}> {item.puzzle_02} </td>
+           <td style={{backgroundColor:'white',height:'120px',width:'100px',marginLeft:'20%'}}> {item.puzzle_03} </td>
+           <td style={{backgroundColor:'white',height:'120px',width:'100px',marginLeft:'20%'}}> {item.puzzle_04} </td>
+           <td style={{backgroundColor:'white',height:'120px',width:'100px',marginLeft:'20%'}}> {item.puzzle_05} </td>
+           <td style={{backgroundColor:'white',height:'120px',width:'100px',marginLeft:'20%'}}> {item.puzzle_06} </td>
+            </div>
             <td>
-            <select name="Progress" id="progress" style={{marginLeft:'-5%'}}>
-            <option  value="E">E</option>
-            <option  value="C">C</option>
-            <option  value="B">B</option>
-            <option  value="A">A</option>
-            <option  value="A*">A*</option>
-            </select> 
-
-            <select name="Progress" id="progress"style={{marginLeft:'3.5%'}}>
-            <option  value="E">E</option>
-            <option  value="C">C</option>
-            <option  value="B">B</option>
-            <option  value="A">A</option>
-            <option  value="A*">A*</option>
-            </select> 
-
-            <select name="Progress" id="progress" style={{marginLeft:'3.5%'}}>
-            <option  value="E">E</option>
-            <option  value="C">C</option>
-            <option  value="B">B</option>
-            <option  value="A">A</option>
-            <option  value="A*">A*</option>
-            </select> 
-
-            <select name="Progress" id="progress" style={{marginLeft:'3.5%'}}>
-            <option  value="E">E</option>
-            <option  value="C">C</option>
-            <option  value="B">B</option>
-            <option  value="A">A</option>
-            <option  value="A*">A*</option>
-            </select> 
-
-            <select name="Progress" id="progress" style={{marginLeft:'3.5%'}}>
-            <option  value="E">E</option>
-            <option  value="C">C</option>
-            <option  value="B">B</option>
-            <option  value="A">A</option>
-            <option  value="A*">A*</option>
-            </select> 
-
-            <select name="Progress" id="progress" style={{marginLeft:'4%'}}>
-            <option  value="E">E</option>
-            <option  value="C">C</option>
-            <option  value="B">B</option>
-            <option  value="A">A</option>
-            <option  value="A*">A*</option>
-            </select> 
-            </td>      
-            {/* Total grade*/}
+            {item.total_grade}
+            </td>
             <td>
-            <select name="Progress" id="progress" style={{marginLeft:'0%', marginTop:'34%'}}>
-            <option  value="E">E</option>
-            <option  value="C">C</option>
-            <option  value="B">B</option>
-            <option  value="A">A</option>
-            <option  value="A*">A*</option>
-            </select> 
+              <Link to={`/updatekx/${item.id}`}>Update </Link>
             </td>
        
           </tr>

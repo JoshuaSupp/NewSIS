@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-//table class_name (getting data from class_name)
+//table admin (getting data from class_name)
 app.get("/api/get", (req,res) =>{
     const sqlGet = "SELECT * FROM admin";
     db.query(sqlGet,(error,result)=>{
