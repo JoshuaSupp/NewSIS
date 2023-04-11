@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import Navbar from '../../Components/Navbar/Navbar';
-import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import { useNavigate, useParams } from 'react-router-dom';
+import Navbar from '../../Components/Navbar/Navbar';
 
-const UpdateKXStudentG = () => {
+const UpdatePDStudentG = () => {
     const {id} = useParams(); 
     const[full_name, setfullname] = useState('');
     const [puzzle_01, setpuzzle01] = useState('');
@@ -15,7 +15,7 @@ const UpdateKXStudentG = () => {
     const [total_grade, settotalgrade] = useState('');
 
     useEffect(()=> {
-        axios.get('http://localhost:5001/edit/'+id)
+        axios.get('http://localhost:5003/edit/'+id)
         .then(res => {
             setfullname(res.data[0].full_name); 
             setpuzzle01(res.data[0].puzzle_01);
@@ -34,10 +34,10 @@ const UpdateKXStudentG = () => {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        axios.put('http://localhost:5001/update/'+id, {full_name,puzzle_01,puzzle_02,puzzle_03,puzzle_04,puzzle_05,puzzle_06,total_grade})
+        axios.put('http://localhost:5003/update/'+id, {full_name,puzzle_01,puzzle_02,puzzle_03,puzzle_04,puzzle_05,puzzle_06,total_grade})
         .then(res => {
             if(res.data.updated){
-                navigate('../KXStudentG')
+                navigate('../PDStudentG')
             }else{
                 alert('Not Updated');
             }
@@ -55,8 +55,8 @@ const UpdateKXStudentG = () => {
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,200&display=swap" rel="stylesheet"></link>
 
- <button class="button button1"><a href="/KXStudentG">Back To KX Student Grades</a></button>
-    <h1>Update KX Student Grades</h1>
+ <button class="button button1"><a href="/PDStudentG">Back To PD Student Grades</a></button>
+    <h1>Update PD Student Grades</h1>
         <div style={{marginTop:'270px', alignItems:'center',textAlign:'center'}}class="container">
   
   <form id='formanup' onSubmit={handleSubmit}>
@@ -219,4 +219,4 @@ const UpdateKXStudentG = () => {
 )
 }
 
-export default UpdateKXStudentG
+export default UpdatePDStudentG

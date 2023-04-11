@@ -28,6 +28,7 @@ import PDStudentG from './Pages/PDStudentG/PDStudentG';
 import KXStudentG from './Pages/KXStudentG/KXStudentG';
 import UpdateANStudentG from './Pages/ANStudentG/UpdateANStudentG';
 import UpdateKXStudentG from './Pages/KXStudentG/UpdateKXStudentG';
+import UpdatePDStudentG from './Pages/PDStudentG/UpdatePDStudentG';
 
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
     <Route path='/PDStudentG' exact to element={<PDStudentG/>} />
     <Route path='/updatean/:id' exact to element={<UpdateANStudentG/>} />
     <Route path='/updatekx/:id' exact to element={<UpdateKXStudentG/>} />
+    <Route path='/updatepd/:id' exact to element={<UpdatePDStudentG/>} />
     </Routes>
     
     </BrowserRouter>

@@ -66,7 +66,7 @@ const CreateKX = () => {
 
     <Navbar/>
 
-
+    <button class="button button1"><a href="/KXRegistry">Back To KX Registry</a></button>
   
 <h1 style={{color:"black",marginLeft: "1.5%"}}>Add KX Students</h1>
   
@@ -82,6 +82,7 @@ const CreateKX = () => {
     type="text" id="index_no" name="index_no" required 
     value={index_no} 
     onChange={handleInputChange}
+    placeholder='index no...'
     />
 
 
@@ -98,7 +99,7 @@ const CreateKX = () => {
     type="text" name="full_name" required 
     value={full_name} 
     onChange={handleInputChange}
-  
+    placeholder='student name...'
     />
   </div>
 </div>
@@ -113,6 +114,7 @@ const CreateKX = () => {
    type="number" id="age" name="age" required
    value={age} 
    onChange={handleInputChange}
+   placeholder='age...'
     />
   </div>
 </div>
@@ -127,6 +129,7 @@ const CreateKX = () => {
     type="text" id="school" name="school" required
     value={school} 
     onChange={handleInputChange}
+  placeholder='school...'
     />
   </div>
 </div>
@@ -140,6 +143,7 @@ const CreateKX = () => {
     type="text" id="parent_name"name="parent_name" required
     value={parent_name} 
     onChange={handleInputChange}
+    placeholder='parent name...'
     />
   </div>
 </div>
@@ -153,6 +157,7 @@ const CreateKX = () => {
    type="number" id="parent_contact" name="parent_contact" required
    value={parent_contact} 
    onChange={handleInputChange}
+   placeholder='parent contact...'
     />
   </div>
 </div>
@@ -166,6 +171,7 @@ const CreateKX = () => {
   type="text" id="comments" name="comments" required
   value={comments} 
   onChange={handleInputChange}
+  placeholder='comments...'
     />
   </div>
 </div>
