@@ -29,6 +29,8 @@ import KXStudentG from './Pages/KXStudentG/KXStudentG';
 import UpdateANStudentG from './Pages/ANStudentG/UpdateANStudentG';
 import UpdateKXStudentG from './Pages/KXStudentG/UpdateKXStudentG';
 import UpdatePDStudentG from './Pages/PDStudentG/UpdatePDStudentG';
+import Reports from './Pages/Reports/Reports';
+import KXGradeReports from './Pages/Reports/KXGradeReports/KXGradeReports';
 
 
 function App() {
@@ -62,6 +64,8 @@ function App() {
     <Route path='/updatean/:id' exact to element={<UpdateANStudentG/>} />
     <Route path='/updatekx/:id' exact to element={<UpdateKXStudentG/>} />
     <Route path='/updatepd/:id' exact to element={<UpdatePDStudentG/>} />
+    <Route path='/Reports' exact to element={<Reports/>} />
+    <Route path='/KXGradeReports' exact to element={<KXGradeReports/>} />
     </Routes>
     
     </BrowserRouter>

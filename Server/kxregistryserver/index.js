@@ -3,6 +3,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const mysql = require("mysql2")
 const cors = require("cors");
+const PDFDocument = require('pdfkit');
+const fs = require('fs');
 
 const db = mysql.createPool({
     host: "localhost",
@@ -67,6 +69,53 @@ app.delete("/api/remove/:id", (req,res)=>{
 
 })
 
+//KX Student Grade Reports
+  // Route to generate and download PDF
+  app.get('/api/pdf', (req, res) => {
+    // Fetch data from MySQL table
+    db.query('SELECT * FROM kx_registry', (error, results) => {
+      if (error) throw error;
+  
+      // Create a new PDF document
+      const doc = new PDFDocument();
+  
+      // Pipe the PDF document to a writable stream
+      const stream = fs.createWriteStream('output.pdf');
+      doc.pipe(stream);
+  
+      doc.fontSize(20).text("KX Student Grades", 50 ,50,  { underline: true } );
+      doc.moveDown();
+      
+      // Define table headers
+      doc.fontSize(12).text('ID', 50, 100, { bold: true });
+      doc.fontSize(12).text('Index No', 150, 100, { bold: true });
+      doc.fontSize(12).text('Student Name', 250, 100, { bold: true });
+      doc.fontSize(12).text('Total Grade', 370, 100, { bold: true });
+      
+      const rowHeight = 20; // Define the height of each row
+      const margin = 10; // Define the margin between rows
+      
+      results.forEach((row, index) => {
+        // Calculate the vertical position of the current row
+        const yPos = 100 + (index + 1) * rowHeight + margin;
+        // Write data to the current row
+        doc.fontSize(12).text(`${row.id}`, 50, yPos)
+          .text(`${row.index_no}`, 150, yPos)
+          .text(`${row.full_name}`, 250, yPos)
+          .text(`${row.total_grade}`, 400, yPos);
+      });
+
+      // End the PDF document and send it as response
+      doc.end();
+      stream.on('finish', () => {
+        res.download('output.pdf', 'table_data.pdf', error => {
+          if (error) throw error;
+          console.log('PDF downloaded successfully');
+        });
+      });
+    });
+  });
+  
 
 app.get("/", (req,res)=>{
     // const sqlInsert = "INSERT INTO kx1e01_registry (index_no,full_name,age,dob,school,student_contact,parent_name,parent_email,parent_contact,address) VALUES ('KX0001','Jadon Smith','16','2006/02/20','Gateway International School','0734734259','Michelle Smith','michellesmith@gmail.com','0723524546','No.20/1,Colombo 06')";
