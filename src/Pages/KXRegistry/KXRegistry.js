@@ -99,7 +99,10 @@ const KXRegistry = () => {
             <td>{item.parent_name}</td>
             <td>{item.parent_contact}</td>
             <td>{item.comments}</td>
-             <td>  <img onClick={() => deleteContact(item.id)} style={{marginTop: "40px", marginLeft: "0px",width:"70px",height:"60px"}}  src ="/images/deleteicon.png"   alt='' /></td> 
+             <td>  <img onClick={() => deleteContact(item.id)} style={{marginTop: "40px", marginLeft: "0px",width:"70px",height:"60px"}}  src ="/images/deleteicon.png"   alt='' />
+            
+             <Link to={`/updatekxreg/${item.id}`}  >Update </Link>
+             </td> 
           
        
           </tr>

@@ -6,7 +6,7 @@ const Reports = () => {
     <div >
 
     <Navbar/>
-<table style={{marginTop:"8%",marginInlineStart:"30%"}}>
+<table style={{marginTop:"3%",marginInlineStart:"30%"}}>
 
 <tr style={{ lineHeight: "80px", backgroundColor: "#F16E6E" }}>
       <th>Reports</th>
@@ -14,13 +14,22 @@ const Reports = () => {
   <tbody>
     
     <tr>
-    <td> <a href='./ANReports'>AN Student Grade Reports</a></td>
+    <td> <a href='./ANGradeReports'>AN Student Grade Report</a></td>
     </tr>
     <tr>
-    <td> <a href='./KXReports'>KX Student Grade Reports</a></td>
+    <td> <a href='./KXGradeReports'>KX Student Grade Report</a></td>
     </tr>
     <tr>
-    <td> <a href='./PDReports'>PD Student Grade Reports</a></td>
+    <td> <a href='./PDGradeReports'>PD Student Grade Report</a></td>
+    </tr>
+    <tr>
+    <td> <a href='./ANCommentReports'>AN Student Comments Report</a></td>
+    </tr>
+    <tr>
+    <td> <a href='./KXCommentReports'>KX Student Comments Report</a></td>
+    </tr>
+    <tr>
+    <td> <a href='./PDCommentReports'>PD Student Comments Report</a></td>
     </tr>
    
   </tbody>

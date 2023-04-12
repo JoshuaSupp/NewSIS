@@ -31,8 +31,14 @@ import UpdateKXStudentG from './Pages/KXStudentG/UpdateKXStudentG';
 import UpdatePDStudentG from './Pages/PDStudentG/UpdatePDStudentG';
 import Reports from './Pages/Reports/Reports';
 import KXGradeReports from './Pages/Reports/KXGradeReports/KXGradeReports';
-
-
+import ANGradeReports from './Pages/Reports/ANGradeReports/ANGradeReports';
+import PDGradeReports from './Pages/Reports/PDGradeReports/PDGradeReports';
+import ANCommentReports from './Pages/Reports/ANCommentReports/ANCommentReports';
+import KXCommentReports from './Pages/Reports/KXCommentReports/KXCommentReports';
+import PDCommentReports from './Pages/Reports/PDCommentReports/PDCommentReports';
+import UpdateANRegistry from './Pages/ANRegistry/UpdateANRegistry';
+import UpdateKXRegistry from './Pages/KXRegistry/UpdateKXRegistry';
+import UpdatePDRegistry from './Pages/PDRegistry/UpdatePDRegistry';
 function App() {
   return (
     <BrowserRouter>
@@ -64,8 +70,16 @@ function App() {
     <Route path='/updatean/:id' exact to element={<UpdateANStudentG/>} />
     <Route path='/updatekx/:id' exact to element={<UpdateKXStudentG/>} />
     <Route path='/updatepd/:id' exact to element={<UpdatePDStudentG/>} />
+    <Route path='/updateanreg/:id' exact to element={<UpdateANRegistry/>} />
+    <Route path='/updatekxreg/:id' exact to element={<UpdateKXRegistry/>} />
+    <Route path='/updatepdreg/:id' exact to element={<UpdatePDRegistry/>} />
     <Route path='/Reports' exact to element={<Reports/>} />
     <Route path='/KXGradeReports' exact to element={<KXGradeReports/>} />
+    <Route path='/ANGradeReports' exact to element={<ANGradeReports/>} />
+    <Route path='PDGradeReports' exact to element={<PDGradeReports/>} />
+    <Route path='ANCommentReports' exact to element={<ANCommentReports/>} />
+    <Route path='KXCommentReports' exact to element={<KXCommentReports/>} />
+    <Route path='PDCommentReports' exact to element={<PDCommentReports/>} />
     </Routes>
     
     </BrowserRouter>

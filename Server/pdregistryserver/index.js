@@ -3,6 +3,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const mysql = require("mysql2")
 const cors = require("cors");
+const PDFDocument = require('pdfkit');
+const fs = require('fs');
 
 const db = mysql.createPool({
     host: "localhost",
@@ -35,7 +37,7 @@ app.post("/api/post", (req,res)=>{
 
 })
 
-//Update pd_registry data
+//Update pd grades data
 app.get('/edit/:id', (req,res) =>{
     const sqlGet = "Select * FROM pd_registry WHERE id = ?"
     const id = req.params.id;
@@ -55,6 +57,27 @@ app.put('/update/:id', (req, res) => {
 })
 
 
+//Update pd registry data
+app.get('/editreg/:id', (req,res) =>{
+  const sqlGet = "Select * FROM pd_registry WHERE id = ?"
+  const id = req.params.id;
+  db.query(sqlGet,[id], (err, result) => {
+      if(err) return res.json({Error: err});
+      return res.json(result);
+  })
+})
+
+app.put('/updatereg/:id', (req, res) => {
+  const sqlGet = "UPDATE pd_registry SET `full_name` = ?, `age` = ?, `school` = ?, `parent_name` = ?, `parent_contact` = ?, `comments` = ?  WHERE id = ?"
+  const id = req.params.id;
+  db.query(sqlGet, [req.body.full_name, req.body.age, req.body.school, req.body.parent_name, req.body.parent_contact, req.body.comments, id], (err, result) =>{
+      if(err) return res.json("Errorr");
+      return res.json({updated: true})
+  })
+})
+
+
+
 //Delete pd_registry Data  
 app.delete("/api/remove/:id", (req,res)=>{
     const {id} = req.params;
@@ -67,6 +90,104 @@ app.delete("/api/remove/:id", (req,res)=>{
     })
 
 })
+
+
+//pd student grade reports
+// Route to generate and download PDF
+app.get('/api/pdf', (req, res) => {
+    // Fetch data from MySQL table
+    db.query('SELECT * FROM pd_registry', (error, results) => {
+      if (error) throw error;
+  
+      // Create a new PDF document
+      const doc = new PDFDocument();
+  
+      // Pipe the PDF document to a writable stream
+      const stream = fs.createWriteStream('output.pdf');
+      doc.pipe(stream);
+  
+      doc.fontSize(20).text("PD Student Grades", 50 ,50,  { underline: true } );
+      doc.moveDown();
+      
+      // Define table headers
+      doc.fontSize(12).text('ID', 50, 100, { bold: true });
+      doc.fontSize(12).text('Index No', 150, 100, { bold: true });
+      doc.fontSize(12).text('Student Name', 250, 100, { bold: true });
+      doc.fontSize(12).text('Total Grade', 370, 100, { bold: true });
+      
+      const rowHeight = 20; // Define the height of each row
+      const margin = 10; // Define the margin between rows
+      
+      results.forEach((row, index) => {
+        // Calculate the vertical position of the current row
+        const yPos = 100 + (index + 1) * rowHeight + margin;
+        // Write data to the current row
+        doc.fontSize(12).text(`${row.id}`, 50, yPos)
+          .text(`${row.index_no}`, 150, yPos)
+          .text(`${row.full_name}`, 250, yPos)
+          .text(`${row.total_grade}`, 400, yPos);
+      });
+
+      // End the PDF document and send it as response
+      doc.end();
+      stream.on('finish', () => {
+        res.download('output.pdf', 'table_data.pdf', error => {
+          if (error) throw error;
+          console.log('PDF downloaded successfully');
+        });
+      });
+    });
+  });
+  
+//PD Comments Report
+  // Route to generate and download PDF
+  app.get('/api/pdfcomments', (req, res) => {
+    // Fetch data from MySQL table
+    db.query('SELECT * FROM pd_registry', (error, results) => {
+      if (error) throw error;
+  
+      // Create a new PDF document
+      const doc = new PDFDocument();
+  
+      // Pipe the PDF document to a writable stream
+      const stream = fs.createWriteStream('output.pdf');
+      doc.pipe(stream);
+  
+      doc.fontSize(20).text("PD Student Comments", 50 ,50,  { underline: true } );
+      doc.moveDown();
+      
+      // Define table headers
+      doc.fontSize(12).text('ID', 50, 100, { bold: true });
+      doc.fontSize(12).text('Index No', 100, 100, { bold: true });
+      doc.fontSize(12).text('Student Name', 170, 100, { bold: true });
+      doc.fontSize(12).text('Parent Name', 270, 100, { bold: true });
+      doc.fontSize(12).text('Comments', 370, 100, { bold: true });
+      
+      const rowHeight = 20; // Define the height of each row
+      const margin = 10; // Define the margin between rows
+      
+      results.forEach((row, index) => {
+        // Calculate the vertical position of the current row
+        const yPos = 100 + (index + 1) * rowHeight + margin;
+        // Write data to the current row
+        doc.fontSize(12).text(`${row.id}`, 50, yPos)
+          .text(`${row.index_no}`, 100, yPos)
+          .text(`${row.full_name}`, 170, yPos)
+          .text(`${row.parent_name}`, 270, yPos)
+          .text(`${row.comments}`, 370, yPos)
+      });
+
+      // End the PDF document and send it as response
+      doc.end();
+      stream.on('finish', () => {
+        res.download('output.pdf', 'table_data.pdf', error => {
+          if (error) throw error;
+          console.log('PDF downloaded successfully');
+        });
+      });
+    });
+  });
+  
 
 
 app.get("/", (req,res)=>{
