@@ -1,148 +1,117 @@
-.kx h2{
-  text-decoration-line: underline;
-position: absolute;
-width: 70%;
-height: 10%;
-left:160px;
-top:2px;
-display: inline-block;
-border-radius: 2em;
-
-font-family: 'Josefin Sans', sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 150%;
-line-height: 120%;
-
-padding-top: 3%;
-padding-bottom: 1%;
-margin-top: 2%;
-margin-left: 7%;
-
-
-/* or 729px */
-
-text-align: center;
-letter-spacing: 1em;
-
-text-transform: uppercase;
-
-color: #FFFBF0;
-background-color: #FF9F4D;
-
-}
-
-.kx table {
-  font-family: 'Josefin Sans', sans-serif;
-  border-collapse: collapse;
-  width: 80%;
-  margin-top: 30px;
-  margin-left:120px;
- 
-}
-
-.kx{
-    background-color: white
-    
-}
-.kx td, th {
-  border: 1px solid #dddddd;
-  padding: 8px;
-  border-radius: 15px;
-  background-color: white;
-}
-
-.kx th{
- background-color: pink;
-}
-
-.kx tr:nth-child(even) {
-  background: #dddddd;
-}
+#admintable #table.customers {
+    font-family: Arial, Helvetica, sans-serif;
+   
+  }
 
 
 
- .kx .button1 {
-  font-family: 'Josefin Sans', sans-serif;
-  background-color: #d8d05d; /* Green */
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 5%;
-  color: #000;
-  margin-top: 30px;
-  margin-left: 123px;
-  
-}
-
-.kx .button2 {
-  font-family: 'Josefin Sans', sans-serif;
-  background-color: #d8d05d; /* Green */
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 5%;
-  color: #000;
-  margin-top: 30px;
-  margin-left: 100px;
-  
-}
-
-.kx .button1 {padding: 15px 25px;}
-.kx .button2 {padding: 15px 25px;}
-
-h4{
-
-align-content: center;
-}
-
-input[type=text] {
-  width: 130px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background-color: rgb(255, 241, 116);
-  
-  background-position: 10px 10px; 
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-  transition: width 0.4s ease-in-out;
-  margin-top: 20px;
-  
-}
-
-input[type=text]:focus {
+.admin .admintext{
+  font-size: 35px;
+  text-decoration: underline;
   width: 100%;
 }
- 
-.btn{
 
-  border:none ;
+
+#admintable{
+    margin-left: 0%;
+    width: 100%;
+   
+
+}
+  #admintable #customers td, #customers th {
+    border: 10px solid #000000;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  #admintable #customers tr:nth-child(even){
+    background-color: #000000;
+    color: white;
+}
+  
+  #admintable #customers tr:hover {background-color: #f6ff00;}
+  
+  #admintable #customers th {
+    padding-top: 20px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+table{
+    width: 100%;
+}
+
+
+.btncreate{
+    background-color: black; 
+    border: none;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 13%;
+    margin-left: 10%;
+}
+
+
+
+.admin h2 {
+  width: 96%;
+  height: 15%;
+  margin-top: 7%;
+  margin-left: 100%;
+  margin-bottom: 5%;
+  border-radius: 25px;
+  font-size: 2rem;
+  background-color: #ff9736;
   color: white;
-  padding:5px 8px ;
+  padding: 10px;
+  width: 100%;
+ 
+}
+
+.admin .header {
+  width: 100%;
+  background-color: #e9dab1;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 4%;
+  border-radius: 0.4em;
+  margin-left: 100%;
+  align-items: center;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border-radius:5px ;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor:pointer ;
-
 }
 
-.btn-edit{
-  background-color: #008cba;
-}
-
-
+.admin .add,
+  .admin .remove {
+    margin-top: 5%;
+    margin-left: 1.5%;
+    border-radius: 10pt;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(255, 98, 98);
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100%;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .admin .add:hover,
+  .admin .remove:hover {
+    background-color: #e84f4f;
+  }

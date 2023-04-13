@@ -75,7 +75,7 @@ const KXRegistry = () => {
       <button class="button button2"><a href="/KXStudentG">KX Student Grades</a></button>
       </div>
       <table>
-          <tr style={{lineHeight: "50px",backgroundColor: "rgb(241, 110, 110)"}}>
+          <tr style={{lineHeight: "20px",backgroundColor: "rgb(241, 110, 110)"}}>
             <th style={{color:"black"}}>ID</th>
             <th style={{color:"black"}}>Index No</th>
             <th style={{color:"black"}}>Student Name</th>
@@ -83,14 +83,18 @@ const KXRegistry = () => {
             <th style={{color:"black"}}>School</th>
             <th style={{color:"black"}}>Parent Name</th>
             <th style={{color:"black"}}>Parent/Student Contact</th>
+            <th style={{color:"black"}}>Parent Email</th>
             <th style={{color:"black"}}>Comments</th>
-            <th></th>
+            <th style={{color:"black"}}>Actions</th>
+            <th style={{color:"black"}}>Certificate Template</th>
+            <th style={{color:"black"}}>Send Final Certificate</th>
+            
           </tr>
    
  
           {data.map((item, index)=> {
   return(
-          <tr style={{lineHeight: "50px",backgroundColor: "rgb(241, 110, 110)"}}>
+          <tr style={{lineHeight: "20px",backgroundColor: "rgb(241, 110, 110)"}}>
             <td>{item.id}</td>
             <td>{item.index_no}</td>
             <td>{item.full_name}</td>
@@ -98,11 +102,14 @@ const KXRegistry = () => {
             <td>{item.school}</td>
             <td>{item.parent_name}</td>
             <td>{item.parent_contact}</td>
+            <td>{item.parent_email}</td>
             <td>{item.comments}</td>
              <td>  <img onClick={() => deleteContact(item.id)} style={{marginTop: "40px", marginLeft: "0px",width:"70px",height:"60px"}}  src ="/images/deleteicon.png"   alt='' />
-            
+    
              <Link to={`/updatekxreg/${item.id}`}  >Update </Link>
              </td> 
+             <td><a href="https://drive.google.com/file/d/1_kd6nLaBc7_7J5cAtv5rQsHwa2E4EZ8u/view?usp=sharing" target="blank">Template</a></td>
+             <td><a href='https://mail.google.com/mail/u/0/#inbox' target='blank'>Email</a></td>
           
        
           </tr>

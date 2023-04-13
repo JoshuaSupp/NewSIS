@@ -12,6 +12,7 @@ function UpdateANRegistry(){
     const [school, setschool] = useState('');
     const [parent_name, setparentname] = useState('');
     const [parent_contact, setcontact] = useState('');
+    const [parent_email, setparentemail] = useState('');
     const [comments, setcomments] = useState('');
     
 
@@ -22,7 +23,8 @@ function UpdateANRegistry(){
             setage(res.data[0].age);
             setschool(res.data[0].school); 
             setparentname(res.data[0].parent_name); 
-            setcontact(res.data[0].parent_contact); 
+            setcontact(res.data[0].parent_contact);
+            setparentemail(res.data[0].parent_email);
             setcomments(res.data[0].comments);
 
         })
@@ -33,7 +35,7 @@ function UpdateANRegistry(){
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        axios.put('http://localhost:5003/updatereg/'+id, {full_name,age,school,parent_name,parent_contact,comments})
+        axios.put('http://localhost:5003/updatereg/'+id, {full_name,age,school,parent_name,parent_contact,parent_email,comments})
         .then(res => {
             if(res.data.updated){
                 navigate('../PDRegistry')
@@ -126,6 +128,20 @@ function UpdateANRegistry(){
       type="number" name="full_name" required 
       value={parent_contact} 
       onChange={e => setcontact(e.target.value)}
+    
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Parent Email</label>
+    </div>
+    <div class="col-75">
+      <input 
+      type="email" name="full_name" required 
+      value={parent_email} 
+      onChange={e => setparentemail(e.target.value)}
     
       />
     </div>

@@ -29,9 +29,9 @@ app.get("/api/get", (req,res) =>{
 
 //Add an_registry Data
 app.post("/api/post", (req,res)=>{
-    const {index_no,full_name,age,school,parent_name,parent_contact,comments} = req.body;
-    const sqlInsert = "INSERT INTO an_registry (index_no,full_name,age,school,parent_name,parent_contact,comments) VALUES (?,?,?,?,?,?,?)";
-    db.query(sqlInsert,[index_no,full_name,age,school,parent_name,parent_contact,comments], (error, result)=>{
+    const {index_no,full_name,age,school,parent_name,parent_contact,parent_email,comments} = req.body;
+    const sqlInsert = "INSERT INTO an_registry (index_no,full_name,age,school,parent_name,parent_contact,parent_email,comments) VALUES (?,?,?,?,?,?,?,?)";
+    db.query(sqlInsert,[index_no,full_name,age,school,parent_name,parent_contact,parent_email,comments], (error, result)=>{
         if(error){
             console.log(error);
         }
@@ -73,9 +73,9 @@ app.get('/editreg/:id', (req,res) =>{
 })
 
 app.put('/updatereg/:id', (req, res) => {
-  const sqlGet = "UPDATE an_registry SET `full_name` = ?, `age` = ?, `school` = ?, `parent_name` = ?, `parent_contact` = ?, `comments` = ?  WHERE id = ?"
+  const sqlGet = "UPDATE an_registry SET `full_name` = ?, `age` = ?, `school` = ?, `parent_name` = ?, `parent_contact` = ?, `parent_email` = ?,  `comments` = ?  WHERE id = ?"
   const id = req.params.id;
-  db.query(sqlGet, [req.body.full_name, req.body.age, req.body.school, req.body.parent_name, req.body.parent_contact, req.body.comments, id], (err, result) =>{
+  db.query(sqlGet, [req.body.full_name, req.body.age, req.body.school, req.body.parent_name, req.body.parent_contact, req.body.parent_email, req.body.comments,  id], (err, result) =>{
       if(err) return res.json("Errorr");
       return res.json({updated: true})
   })

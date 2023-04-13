@@ -13,11 +13,9 @@ const initialState = {
   school:"",
   student_contact:"",
   parent_name:"",
-  parent_email:"",
   parent_contact:"",
-  address:"",
+  parent_email:"",
   comments:"",
-  payments:""
 }
 
 
@@ -27,7 +25,7 @@ const CreateAN = () => {
   
   const [state, setState] = useState(initialState);
 
-  const {index_no,full_name,age,school,parent_name,parent_contact,comments} = state;
+  const {index_no,full_name,age,school,parent_name,parent_contact,parent_email,comments} = state;
 
   const navigate = useNavigate();
 
@@ -37,7 +35,7 @@ const CreateAN = () => {
       toast.error("Please provide value into each field")
     }else{
       axios.post("http://localhost:5002/api/post", {
-        index_no,full_name,age,school,parent_name,parent_contact,comments
+        index_no,full_name,age,school,parent_name,parent_contact,parent_email,comments
       }).then(() => {
         setState({
         index_no:"",
@@ -46,7 +44,10 @@ const CreateAN = () => {
         school:"",
         parent_name:"",
         parent_contact:"",
-        comments:""})
+        parent_email:"",
+        comments:"",
+        
+      })
       })
       .catch((error) => toast.error(error.response.data));
       setTimeout(() => navigate("../ANRegistry"), 500);
@@ -71,7 +72,7 @@ const CreateAN = () => {
   <h1 style={{color:"black",marginLeft: "1.5%"}}>Add AN Students</h1>
     
     
-  <div style={{marginTop: "120px", background:'orangered'}}class="container">
+  <div style={{marginTop: "120px", background:'	#E8E8E8', marginBottom:'120px'}}class="container">
   <form onSubmit={handleSubmit}>
   <div class="row">
     <div class="col-25">
@@ -162,6 +163,21 @@ const CreateAN = () => {
       />
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-25">
+      <label  class='imgtext'>Parent Email</label>
+    </div>
+    <div class="col-75">
+      <input 
+     type="email" id="parent_email" name="parent_email" required
+     value={parent_email} 
+     onChange={handleInputChange}
+     placeholder='parent email....'
+      />
+    </div>
+  </div>
+
 
   <div class="row">
     <div class="col-25">

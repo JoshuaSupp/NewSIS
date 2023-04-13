@@ -1,0 +1,149 @@
+.kx h2{
+    text-decoration-line: underline;
+  position: absolute;
+  width: 70%;
+  height: 10%;
+  left:160px;
+  top:2px;
+  display: inline-block;
+  border-radius: 2em;
+  
+  font-family: 'Josefin Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 150%;
+  line-height: 120%;
+  
+  padding-top: 3%;
+  padding-bottom: 1%;
+  margin-top: 2%;
+  margin-left: 7%;
+  
+  
+  /* or 729px */
+  
+  text-align: center;
+  letter-spacing: 1em;
+  
+  text-transform: uppercase;
+  
+  color: #FFFBF0;
+  background-color: #FF9F4D;
+  
+  }
+  
+  .kx table {
+    font-family: 'Josefin Sans', sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-top: 30px;
+    margin-left: 80px;
+   font-size: 14px;
+  }
+  
+  .kx{
+      background-color: white
+      
+  }
+  .kx td, th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    border-radius: 15px;
+    background-color: white;
+  }
+  
+  .kx th{
+   background-color: pink;
+  }
+  
+  .kx tr:nth-child(even) {
+    background: #dddddd;
+  }
+  
+  
+  
+   .kx .button1 {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #d8d05d; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5%;
+    color: #000;
+    margin-top: 30px;
+    margin-left: 123px;
+    
+  }
+  
+  .kx .button2 {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #d8d05d; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5%;
+    color: #000;
+    margin-top: 30px;
+    margin-left: 100px;
+    
+  }
+  
+  .kx .button1 {padding: 15px 25px;}
+  .kx .button2 {padding: 15px 25px;}
+  
+  h4{
+  
+  align-content: center;
+  }
+  
+  input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: rgb(255, 241, 116);
+    
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+    margin-top: 20px;
+    
+  }
+  
+  input[type=text]:focus {
+    width: 100%;
+  }
+   
+  .btn{
+  
+    border:none ;
+    color: white;
+    padding:5px 8px ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius:5px ;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor:pointer ;
+  
+  }
+  
+  .btn-edit{
+    background-color: #008cba;
+  }
+  
+  
+  
