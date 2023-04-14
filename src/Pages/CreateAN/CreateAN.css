@@ -1,10 +1,19 @@
 .add {
-    background-color: white;
+    background: rgb(225, 231, 234);
     box-sizing: border-box;
     width: 100%;
     color: white;
     align-items: center;
     
+  }
+
+  .add .invalid{
+    
+    font-size: 15px;
+    font-style: bold;
+    color: red;
+    margin-left: 160%;
+    width: 100%;
   }
 
   

@@ -82,6 +82,16 @@
     margin-left: 30%;
     text-align: center;
   }
+  .description input[type=password] {
+    width: 40%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    margin-left: 30%;
+    text-align: center;
+    background-color: rgb(255, 241, 116);
+  }
 
   .submit{
     width: 100px;
@@ -94,4 +104,11 @@
 
   .adminform{
     background-color: #e8c1a9;
+  }
+
+  .invalid{
+    font-size: 20px;
+    font-style: bold;
+    color: red;
+    margin-left: 1%;
   }

@@ -75,7 +75,7 @@ const ANRegistry = () => {
         </div>
         <table>
             <tr style={{lineHeight: "20px",backgroundColor: "rgb(241, 110, 110)"}}>
-              <th style={{color:"black"}}>ID</th>
+            
               <th style={{color:"black"}}>Index No</th>
               <th style={{color:"black"}}>Student Name</th>
               <th style={{color:"black"}}>Age</th>
@@ -93,7 +93,7 @@ const ANRegistry = () => {
             {data.map((item, index)=> {
     return(
             <tr style={{lineHeight: "20px",backgroundColor: "rgb(241, 110, 110)"}}>
-              <td>{item.id}</td>
+              
               <td>{item.index_no}</td>
               <td>{item.full_name}</td>
               <td>{item.age}</td>
