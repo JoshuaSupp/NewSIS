@@ -65,8 +65,7 @@ const ANStudentG = () => {
   
       </div>
       <table>
-          <tr style={{lineHeight: "50px",backgroundColor: "rgb(241, 110, 110)"}}>
-            <th style={{color:"black"}}>ID</th>
+          <tr style={{lineHeight: "20px",backgroundColor: "rgb(241, 110, 110)"}}>
             <th style={{color:"black"}}>Index No</th>
             <th style={{color:"black"}}>Student Name</th>
             <th style={{color:"black"}}>Grades
@@ -85,17 +84,16 @@ const ANStudentG = () => {
  
           {data.map((item, index)=> {
   return(
-          <tr style={{lineHeight: "50px",backgroundColor: "rgb(241, 110, 110)"}}>
-            <td>{item.id}</td>
+          <tr style={{lineHeight: "20px",backgroundColor: "rgb(241, 110, 110)"}}>
             <td>{item.index_no}</td>
             <td>{item.full_name}</td>
             <div >
-            <td style={{backgroundColor:'white',height:'120px',width:'100px',marginLeft:'20%'}}>{item.puzzle_01}</td>
-           <td style={{backgroundColor:'white',height:'120px',width:'100px',marginLeft:'20%'}}> {item.puzzle_02} </td>
-           <td style={{backgroundColor:'white',height:'120px',width:'100px',marginLeft:'20%'}}> {item.puzzle_03} </td>
-           <td style={{backgroundColor:'white',height:'120px',width:'100px',marginLeft:'20%'}}> {item.puzzle_04} </td>
-           <td style={{backgroundColor:'white',height:'120px',width:'100px',marginLeft:'20%'}}> {item.puzzle_05} </td>
-           <td style={{backgroundColor:'white',height:'120px',width:'100px',marginLeft:'20%'}}> {item.puzzle_06} </td>
+            <td style={{backgroundColor:'white',height:'100px',width:'110px',marginLeft:'30%'}}>{item.puzzle_01}</td>
+           <td style={{backgroundColor:'white',height:'100px',width:'110px',marginLeft:'30%'}}> {item.puzzle_02} </td>
+           <td style={{backgroundColor:'white',height:'100px',width:'110px',marginLeft:'30%'}}> {item.puzzle_03} </td>
+           <td style={{backgroundColor:'white',height:'100px',width:'110px',marginLeft:'30%'}}> {item.puzzle_04} </td>
+           <td style={{backgroundColor:'white',height:'100px',width:'110px',marginLeft:'30%'}}> {item.puzzle_05} </td>
+           <td style={{backgroundColor:'white',height:'100px',width:'110px',marginLeft:'30%'}}> {item.puzzle_06} </td>
             </div>
             <td>
             {item.total_grade}

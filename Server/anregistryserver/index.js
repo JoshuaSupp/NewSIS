@@ -166,9 +166,9 @@ app.get('/api/pdfcomments', (req, res) => {
       doc.fontSize(12).text('Index No', 100, 100, { bold: true });
       doc.fontSize(12).text('Student Name', 170, 100, { bold: true });
       doc.fontSize(12).text('Parent Name', 270, 100, { bold: true });
-      doc.fontSize(12).text('Comments', 370, 100, { bold: true });
+      doc.fontSize(12).text('Comments', 390, 100, { bold: true });
       
-      const rowHeight = 20; // Define the height of each row
+      const rowHeight = 50; // Define the height of each row
       const margin = 10; // Define the margin between rows
       
       results.forEach((row, index) => {
@@ -179,7 +179,7 @@ app.get('/api/pdfcomments', (req, res) => {
           .text(`${row.index_no}`, 100, yPos)
           .text(`${row.full_name}`, 170, yPos)
           .text(`${row.parent_name}`, 270, yPos)
-          .text(`${row.comments}`, 370, yPos)
+          .text(`${row.comments}`, 390, yPos)
       });
 
       // End the PDF document and send it as response

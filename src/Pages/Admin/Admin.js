@@ -54,7 +54,6 @@ const Admin = () => {
 
         <table style={{ width:'80%', marginLeft:'15%',marginBottom:'10%'}}>
           <tr style={{lineHeight: "80px",backgroundColor: "rgb(241, 110, 110)"}}>
-          <th>Admin ID</th>
           <th>Admin Username</th>
           <th>Admin Password</th>
           <th>Role</th>
@@ -63,7 +62,6 @@ const Admin = () => {
           {data.map((item, index)=> {
     return(
           <tr>
-          <td style={{background:'white'}}>{item.admin_id}</td>
           <td style={{background:'white'}}>{item.username}</td>
           <td style={{background:'white'}}>{item.password}</td>
           <td style={{background:'white'}}>{item.role}</td>

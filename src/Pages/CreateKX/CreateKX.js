@@ -51,6 +51,7 @@ const CreateKX = () => {
         comments:""})
       })
       .catch((error) => toast.error(error.response.data));
+      console.log('Data Successfully added')
       setTimeout(() => navigate("../KXRegistry"), 500);
     }
   }

@@ -56,7 +56,7 @@ function UpdateKXRegistry(){
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,200&display=swap" rel="stylesheet"></link>
 
- <button class="button button1"><a href="/KXRegistry">Back To KX0001 Registry</a></button>
+ <button class="button button1"><a href="/KXRegistry">Back To KX Registry</a></button>
     <h1>Update KX Student Registry</h1>
         <div style={{marginTop:'100px', alignItems:'center',textAlign:'center'}}class="container">
   
