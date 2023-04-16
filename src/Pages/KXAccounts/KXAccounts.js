@@ -4,6 +4,7 @@ import './KXAccounts.css'
 import {Link} from 'react-router-dom'
 import { toast } from 'react-toastify'
 import axios from 'axios'
+import Navbar from '../../Components/Navbar/Navbar'
 
 const KXAccounts = () => {
   const [data, setData] = useState([]);
@@ -31,52 +32,59 @@ const KXAccounts = () => {
   }
 
   return (
+<div class='admin'>
 
-    <div id='studentprof'>
-        <Sidebar>
-    <h2 id="stprofile"style={{marginBottom:'6%', textAlign:'center', width:'100%', marginLeft:'85%'}}>KX Student Profile Account Details</h2>
+<Navbar/>
+      
+     <link rel="preconnect" href="https://fonts.googleapis.com" /> 
+    <link rel="preconnect" href="https://fonts.gstatic.com"  /> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;1,200&display=swap" rel="stylesheet"   />
+
+    <div style={{display: "inline-block",marginLeft: "0%;"}}>
     
-    <div id='stlogin'>      
-<h1>KX1 Student Accounts</h1>
- <table id="customers">
-  <tr>
-    <th>ID</th>
-    <th>Index No</th>
-    <th>Student Name</th>
-    <th>Username</th>
-    <th>Password</th>
-    <th></th>
-  </tr>
-  {data.map((item, index)=> {
+     
+    <h2 style={{marginLeft:"100%"}}>Welcome to KX Accounts page</h2>
+        
+      <div>
+      <button class="add" style={{color:'black',marginLeft:'5%',width:'200px',height:'50px',fontSize:'20px',backgroundColor:'#FF8040'}}><a href="/KXRegistry">Back To KX Registry</a></button>
+    
+      </div>
+
+          <a href="/CreateKXLogin">
+            <div class="add">- Add KX Student Account - </div>
+          </a>
+        </div> 
+
+        <table style={{ width:'80%', marginLeft:'15%',marginBottom:'10%',backgroundColor:'black'}}>
+          <tr style={{lineHeight: "80px"}}>
+          <th>Index No</th>
+          <th>Student Name</th>
+          <th>Username</th>
+          <th>Password</th>
+          <th>Actions</th>
+          </tr>
+          {data.map((item, index)=> {
     return(
-  <tr>
-      <td>{item.id}</td>
-      <td>{item.index_no}</td>
-      <td>{item.student_name}</td>
-      <td >{item.username}</td>
-      <td>{item.password}</td>
-      <td>
-      <button id="delbtn" onClick={() => deleteContact(item.id)}>Delete</button>
-      </td>
-  </tr>
-    )
-  })}
- 
-  </table>
-  
-  <div>
-  <a href='/CreateKXLogin' style={{color:'white'}}>
-  <button class='btncreatekxlogin'>
-    Create KX Login
-  </button>
-  </a>
-  </div>
+          <tr>
+          <td style={{background:'#BFBFBF'}}>{item.index_no}</td>
+          <td style={{background:'#BFBFBF'}}>{item.student_name}</td>
+          <td style={{background:'#BFBFBF'}}>{item.username}</td>
+          <td style={{background:'#BFBFBF'}}>{item.password}</td>
+          
 
-    </div>
+          <td style={{width:'20px',background:' #BFBFBF',borderRadius:'10px'}}>            
+            <img  onClick={() => deleteContact(item.id)} style={{marginTop: "40px", marginLeft: "0px",width:"70px",height:"60px",}}  src ="/images/deleteicon.png"   alt='' />
+            <Link to={`/updatekxs/${item.id}`}  >Update </Link>
+          </td>
+          </tr>
+           )
+    
+          })}
+          
+          </table>
 
-   
+         
 
-    </Sidebar>
     </div>
   )
 }

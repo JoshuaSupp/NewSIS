@@ -77,6 +77,8 @@ const PDRegistry = () => {
 
         
         <button class="button button2"><a href="/PDStudentG">PD Student Grades</a></button>
+
+        <button class="button button2" style={{backgroundColor:'#FF8040',color:'white'}}><a href="/PDAccounts">PD Student Login</a></button>
         </div>
         <table>
             <tr style={{lineHeight: "20px",backgroundColor: "rgb(241, 110, 110)"}}>

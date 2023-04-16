@@ -39,6 +39,10 @@ import PDCommentReports from './Pages/Reports/PDCommentReports/PDCommentReports'
 import UpdateANRegistry from './Pages/ANRegistry/UpdateANRegistry';
 import UpdateKXRegistry from './Pages/KXRegistry/UpdateKXRegistry';
 import UpdatePDRegistry from './Pages/PDRegistry/UpdatePDRegistry';
+import UpdateAdmin from './Pages/Admin/UpdateAdmin';
+import UpdateKXAccounts from './Pages/KXAccounts/UpdateKXAccounts';
+import UpdateANAccounts from './Pages/ANAccounts/UpdateANAccounts';
+import UpdatePDAccounts from './Pages/PDAccounts/UpdatePDAccounts';
 function App() {
   return (
     <BrowserRouter>
@@ -80,6 +84,10 @@ function App() {
     <Route path='ANCommentReports' exact to element={<ANCommentReports/>} />
     <Route path='KXCommentReports' exact to element={<KXCommentReports/>} />
     <Route path='PDCommentReports' exact to element={<PDCommentReports/>} />
+    <Route path='/updatead/:id' exact to element={<UpdateAdmin/>} />
+    <Route path='/updatekxs/:id' exact to element={<UpdateKXAccounts/>} />
+    <Route path='/updateans/:id' exact to element={<UpdateANAccounts/>} />
+    <Route path='/updatepds/:id' exact to element={<UpdatePDAccounts/>} />
     </Routes>
     
     </BrowserRouter>

@@ -73,6 +73,8 @@ const KXRegistry = () => {
 
       
       <button class="button button2"><a href="/KXStudentG">KX Student Grades</a></button>
+
+      <button class="button button2" style={{backgroundColor:'#FF8040',color:'white'}}><a href="/KXAccounts">KX Student Login</a></button>
       </div>
       <table>
           <tr style={{lineHeight: "20px",backgroundColor: "rgb(241, 110, 110)"}}>

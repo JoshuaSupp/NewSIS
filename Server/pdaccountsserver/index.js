@@ -51,6 +51,29 @@ app.post("/api/post", (req,res)=>{
 })
 
 
+//Update pd_saccounts  data
+app.get('/editpds/:id', (req,res) =>{
+    const sqlGet = "Select * FROM pd_saccounts WHERE id = ?"
+    const id = req.params.id;
+    db.query(sqlGet,[id], (err, result) => {
+        if(err) return res.json({Error: err});
+        return res.json(result);
+    })
+  })
+  
+  app.put('/updatepds/:id', (req, res) => {
+    const sqlGet = "UPDATE pd_saccounts SET `student_name` = ?, `username` = ?, `password` = ?  WHERE id = ?"
+    const id = req.params.id;
+    db.query(sqlGet, [req.body.student_name, req.body.username,req.body.password,   id], (err, result) =>{
+        if(err) return res.json("Errorr");
+        return res.json({updated: true})
+    })
+  })
+  
+
+
+
+
 app.get("/", (req,res)=>{
     // const sqlInsert = "INSERT INTO kx_saccounts (index_no,student_name,username,password) VALUES ('KX1','Spencer Styles','spenstyles','spens123')";
     // db.query(sqlInsert,(error,result)=>{

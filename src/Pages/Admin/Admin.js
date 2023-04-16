@@ -21,9 +21,9 @@ const Admin = () => {
     loadData();
   }, []);
 
-  const deleteContact = (username) => {
+  const deleteContact = (id) => {
     if(window.confirm("Are you sure that you want to a admin?")){
-      axios.delete(`http://localhost:5000/api/remove/${username}`)
+      axios.delete(`http://localhost:5000/api/remove/${id}`)
       
       toast.success("Admin Deleted Successfully");
       setTimeout(() => loadData(), 500);
@@ -57,7 +57,7 @@ const Admin = () => {
           <th>Admin Username</th>
           <th>Admin Password</th>
           <th>Role</th>
-          <th></th>
+          <th>Actions</th>
           </tr>
           {data.map((item, index)=> {
     return(
@@ -67,7 +67,8 @@ const Admin = () => {
           <td style={{background:'white'}}>{item.role}</td>
 
           <td style={{width:'20px',background:' #BFBFBF',borderRadius:'10px'}}>            
-            <img  onClick={() => deleteContact(item.admin_id)} style={{marginTop: "40px", marginLeft: "0px",width:"70px",height:"60px",}}  src ="/images/deleteicon.png"   alt='' />
+            <img  onClick={() => deleteContact(item.id)} style={{marginTop: "40px", marginLeft: "0px",width:"70px",height:"60px",}}  src ="/images/deleteicon.png"   alt='' />
+            <Link to={`/updatead/${item.id}`}  >Update </Link>
           </td>
           </tr>
            )

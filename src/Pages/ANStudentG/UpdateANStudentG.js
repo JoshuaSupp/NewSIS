@@ -70,7 +70,7 @@ function UpdateANStudentG(){
       <input 
       type="text" name="full_name" required 
       value={full_name} 
-      onChange={e => setfullname(e.target.value)}
+      
     
       />
     </div>

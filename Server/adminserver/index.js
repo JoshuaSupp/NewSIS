@@ -74,10 +74,10 @@ app.post("/api/post", (req, res) => {
 });
 
 // API route to delete admin data
-app.delete("/api/remove/:admin_id", (req, res) => {
-    const { admin_id } = req.params;
-    const sqlRemove = "DELETE FROM admin WHERE admin_id = ?";
-    db.query(sqlRemove, admin_id, (error, result) => {
+app.delete("/api/remove/:id", (req, res) => {
+    const { id } = req.params;
+    const sqlRemove = "DELETE FROM admin WHERE id = ?";
+    db.query(sqlRemove, id, (error, result) => {
         if (error) {
             console.log(error);
         } else {
@@ -85,6 +85,27 @@ app.delete("/api/remove/:admin_id", (req, res) => {
         }
     });
 });
+
+
+//Update admin  data
+app.get('/editad/:id', (req,res) =>{
+    const sqlGet = "Select * FROM admin WHERE id = ?"
+    const id = req.params.id;
+    db.query(sqlGet,[id], (err, result) => {
+        if(err) return res.json({Error: err});
+        return res.json(result);
+    })
+  })
+  
+  app.put('/updatead/:id', (req, res) => {
+    const sqlGet = "UPDATE admin SET `password` = ?, `role` = ?  WHERE id = ?"
+    const id = req.params.id;
+    db.query(sqlGet, [req.body.password, req.body.role,  id], (err, result) =>{
+        if(err) return res.json("Errorr");
+        return res.json({updated: true})
+    })
+  })
+  
 
 app.get("/", (req, res) => {
     res.send("Hello Express");

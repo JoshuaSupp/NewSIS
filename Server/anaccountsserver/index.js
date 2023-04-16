@@ -50,6 +50,27 @@ app.post("/api/post", (req,res)=>{
 })
 
 
+//Update an_saccounts  data
+app.get('/editans/:id', (req,res) =>{
+    const sqlGet = "Select * FROM an_saccounts WHERE id = ?"
+    const id = req.params.id;
+    db.query(sqlGet,[id], (err, result) => {
+        if(err) return res.json({Error: err});
+        return res.json(result);
+    })
+  })
+  
+  app.put('/updateans/:id', (req, res) => {
+    const sqlGet = "UPDATE an_saccounts SET `student_name` = ?, `username` = ?, `password` = ?  WHERE id = ?"
+    const id = req.params.id;
+    db.query(sqlGet, [req.body.student_name, req.body.username,req.body.password,   id], (err, result) =>{
+        if(err) return res.json("Errorr");
+        return res.json({updated: true})
+    })
+  })
+  
+
+
 
 
 

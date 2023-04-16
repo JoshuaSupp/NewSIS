@@ -72,6 +72,8 @@ const ANRegistry = () => {
 
         
         <button class="button button2"><a href="/ANStudentG">AN Student Grades</a></button>
+
+        <button class="button button2" style={{backgroundColor:'#FF8040',color:'white'}}><a href="/ANAccounts">AN Student Login</a></button>
         </div>
         <table>
             <tr style={{lineHeight: "20px",backgroundColor: "rgb(241, 110, 110)"}}>

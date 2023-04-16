@@ -67,14 +67,14 @@ const CreateAdmin = () => {
     
   if (name === 'password' && value.length > 6) {
     return; // password length validation
-}
-if (name === 'role' && value.length > 12) {
-  return; // role length validation
-}
-    setState({ ...state, [name]: value });
+  }
+  if (name === 'role' && value.length > 12) {
+    return; // role length validation
+  }
+      setState({ ...state, [name]: value });
 
 
-}
+  }
 
   return (
     <div class='addadmin'>
